@@ -2,9 +2,6 @@ const formElem = document.querySelector(".form")
 const inputElement = document.querySelector("input")
 const listGroup = document.querySelector(".list")
 let list = JSON.parse(localStorage.getItem("list"));
-list.forEach(task=>{
-    myToDoList(task)
-})
 let DateElement = document.querySelector('.date')
 
 function date(){
@@ -20,6 +17,10 @@ date();
 formElem.addEventListener("submit", (e)=>{
     e.preventDefault();
     myToDoList()
+})
+
+list.forEach(task=>{
+    myToDoList(task)
 })
 
 function myToDoList(task){
