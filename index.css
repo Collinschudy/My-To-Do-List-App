@@ -51,7 +51,7 @@ body{
 }
 
 .list li .fa-trash{
-    color: red;
+    color: orangered;
     position: absolute;
     right: 1em;
     top: 50%;
