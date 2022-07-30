@@ -25,9 +25,7 @@ list.forEach(task=>{
 
 function myToDoList(task){
     let doTask = inputElement.value;
-    if(doTask.trim() === "") {
-        return;
-    }
+   
     if(task){
         doTask = task.name
     }
@@ -36,6 +34,10 @@ function myToDoList(task){
         listElem.classList.add('checked');
     }
     listElem.innerText = doTask;
+    if(doTask.trim() === "") {
+        return;
+    }
+
     listGroup.appendChild(listElem)
     inputElement.value = "";
     const checkBtnElement = document.createElement('div')
